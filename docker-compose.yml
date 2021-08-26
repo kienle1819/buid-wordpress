@@ -33,3 +33,10 @@ services:
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+volumes:
+  wp_data:
+    external: true
+  db_data:
+    external: true
+  db_config:
+    external: true
