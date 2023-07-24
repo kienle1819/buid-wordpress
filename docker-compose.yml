@@ -9,6 +9,7 @@ services:
     ports:      
       - ${MYSQL_PORT}:3306
     restart: always
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW --innodb-file-per-table=1 --skip-innodb-read-only-compressed
     env_file:
       - .env
     environment:
